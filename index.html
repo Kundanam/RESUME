@@ -62,34 +62,47 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 4px;
       margin-bottom: 8px;
+      text-align: left;
     }
 
-    /* ✅ Consistent list alignment (same left margin after dot) */
+    /* ✅ Consistent list alignment across devices */
     ul {
-      list-style-position: inside;
-      padding-left: 0;
+      list-style-position: outside;
+      padding-left: 20px;
       margin: 0;
     }
 
     li {
       margin-bottom: 6px;
       text-align: left;
-      display: list-item;
     }
 
-    /* ✅ Force two columns always */
+    /* ✅ Education list alignment (same as bullets visually) */
+    .edu-list {
+      list-style-type: disc;
+      list-style-position: outside;
+      padding-left: 20px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .edu-list li {
+      margin-bottom: 4px;
+    }
+
+    /* ✅ Fixed two-column layout on all devices */
     .two-col {
       display: flex;
       flex-direction: row;
       gap: 20px;
-      flex-wrap: nowrap; /* stops wrapping vertically on small screens */
+      flex-wrap: nowrap; /* prevent vertical stacking */
       justify-content: space-between;
       align-items: flex-start;
     }
 
     .two-col > div {
       flex: 1;
-      min-width: 0; /* allows text wrapping within each column */
+      min-width: 0;
     }
 
     a {
@@ -99,6 +112,13 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    /* ✅ Allow horizontal scroll on very small screens instead of stacking */
+    @media (max-width: 500px) {
+      .two-col {
+        overflow-x: auto;
+      }
     }
   </style>
 </head>
@@ -174,7 +194,11 @@
       </div>
       <div>
         <h3>Education</h3>
-        <p>IIT Guwahati<br />BSc (Hons) - Data Science and AI</p>
+        <ul class="edu-list">
+          <li>IIT Guwahati</li>
+          <li>BSc (Hons) - Data Science and AI</li>
+        </ul>
+
         <h3>Achievements</h3>
         <ul>
           <li>🏆 Chess - District Champion</li>
