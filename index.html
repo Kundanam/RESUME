@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kundanam Gupta - Founder Profile</title>
   <style>
-    /* ✅ Make only last section links (GitHub & LinkedIn) blue */
+    /* ✅ Always blue & underlined for Contact links */
     section:last-of-type a {
       color: blue;
+      text-decoration: underline;
     }
 
     body {
@@ -63,28 +64,32 @@
       margin-bottom: 8px;
     }
 
-    /* ✅ Consistent list alignment fix */
+    /* ✅ Consistent list alignment (same left margin after dot) */
     ul {
       list-style-position: inside;
       padding-left: 0;
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     li {
       margin-bottom: 6px;
       text-align: left;
+      display: list-item;
     }
 
+    /* ✅ Force two columns always */
     .two-col {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       gap: 20px;
+      flex-wrap: nowrap; /* stops wrapping vertically on small screens */
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .two-col > div {
       flex: 1;
-      min-width: 300px;
+      min-width: 0; /* allows text wrapping within each column */
     }
 
     a {
@@ -95,8 +100,6 @@
     a:hover {
       text-decoration: underline;
     }
-
-    /* ❌ Removed mobile responsiveness section */
   </style>
 </head>
 <body>
