@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kundanam Gupta - Founder Profile</title>
   <style>
+    /* ✅ Make only last section links (GitHub & LinkedIn) blue */
+    section:last-of-type a {
+      color: blue;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -91,14 +96,7 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-      .two-col {
-        flex-direction: column;
-      }
-    }
+    /* ❌ Removed mobile responsiveness section */
   </style>
 </head>
 <body>
@@ -128,11 +126,12 @@
           <li>Workflow Optimization & Scaling</li>
           <li>Internal Tools & Team Management</li>
           <li>Growth Strategy & Customer Success</li>
+          <li>Research & Analyst</li>
         </ul>
 
         <h3>Tools & Data</h3>
         <ul>
-          <li>ETL (pipeline development), Data analytics, BI representation</li>
+          <li>ETL (pipeline), Data analytics, BI representation</li>
           <li>Shopify, Graphic designing, Content Systems</li>
           <li>Task & Campaign Automation</li>
         </ul>
@@ -140,9 +139,9 @@
       <div>
         <h3>Full Stack & AI Automation</h3>
         <ul>
-          <li>UI: HTML, Bootstrap (CSS), JavaScript (React)</li>
-          <li>Backend: API management, Node.js, MySQL</li>
-          <li>AI: ML, Generative, LangChain basics, prompt engineering</li>
+          <li><b>UI:</b> HTML, Bootstrap (CSS), JavaScript (React)</li>
+          <li><b>Backend:</b> API management, Node.js, MySQL</li>
+          <li><b>AI:</b> ML, Generative, LangChain basics, prompt engineering</li>
           <li>n8n (Agentic), Logical scripts, Social Media Integration</li>
         </ul>
 
@@ -193,4 +192,3 @@
   </div>
 </body>
 </html>
-
