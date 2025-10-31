@@ -58,29 +58,52 @@
       margin-bottom: 8px;
     }
 
+    /* ✅ Consistent list alignment fix */
     ul {
-      padding-left: 20px;
+      list-style-position: inside;
+      padding-left: 0;
       margin-top: 0;
+      margin-bottom: 10px;
     }
 
     li {
       margin-bottom: 6px;
+      text-align: left;
     }
 
     .two-col {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
     .two-col > div {
       flex: 1;
+      min-width: 300px;
+    }
+
+    a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .two-col {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
-<body style="text-size-adjust: 20px;">
+<body>
   <div class="container" style="text-align: center;">
     <div class="header">
-      <!-- ✅ Replace the image URL below with your actual photo link -->
       <img src="Screenshot 2025-07-06 143845.png" alt="Kundanam Gupta" style="width: 50%; height: 100%; object-fit: cover; object-position: top center; border-radius: 12px; margin-bottom: 20px;"/>
     </div>
 
@@ -109,18 +132,18 @@
 
         <h3>Tools & Data</h3>
         <ul>
-          <li>ETL(pipeline development),Data analytics,BI representation</li>
-          <li>Shopify,Graphic designing,Content Systems</li>
+          <li>ETL (pipeline development), Data analytics, BI representation</li>
+          <li>Shopify, Graphic designing, Content Systems</li>
           <li>Task & Campaign Automation</li>
         </ul>
       </div>
       <div>
-        <h3> Full Stack & AI Automation</h3>
+        <h3>Full Stack & AI Automation</h3>
         <ul>
-          <li>UI: HTML, Bootstrap(CSS), JavaScript(react) </li>
-          <li>Backend: API management, Node js, Mysql</li>
+          <li>UI: HTML, Bootstrap (CSS), JavaScript (React)</li>
+          <li>Backend: API management, Node.js, MySQL</li>
           <li>AI: ML, Generative, LangChain basics, prompt engineering</li>
-          <li>N8n(Agentic), Logical scripts, Social Media Integration</li>
+          <li>n8n (Agentic), Logical scripts, Social Media Integration</li>
         </ul>
 
         <h3>Soft Skills</h3>
@@ -136,13 +159,14 @@
       <div>
         <h3>Key Projects</h3>
         <ul>
-          <li>Inventory management  System </li>
-          <li>Myntra and Twitter Front-End clones </li>
-          <li>Content upload Automation system</li> 
+          <li>Inventory Management System</li>
+          <li>Myntra and Twitter Front-End clones</li>
+          <li>Content Upload Automation System</li>
         </ul>
-         <h3>Hardware(Interested)</h3>
+
+        <h3>Hardware (Interested)</h3>
         <ul>
-          <li>Embedded systems & IOT</li>
+          <li>Embedded Systems & IoT</li>
           <li>Robotics & Automation</li>
         </ul>
       </div>
@@ -160,21 +184,12 @@
 
     <section>
       <h3>Contact</h3>
-      <p>
-           <Li>📞+91-9685356239</Li>    
-          <li>
-            <a href="https://github.com/Kundanam" target="_blank" >  Github: github.com/Kundanam</a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/kundanamgupta/" target="_blank" >  Linkedin: linkedin.com/in/kundanamgupta </a> 
-        
-        </li>
-      </p>
+      <ul>
+        <li>📞 +91-9685356239</li>
+        <li><a href="https://github.com/Kundanam" target="_blank">GitHub: github.com/Kundanam</a></li>
+        <li><a href="https://www.linkedin.com/in/kundanamgupta/" target="_blank">LinkedIn: linkedin.com/in/kundanamgupta</a></li>
+      </ul>
     </section>
   </div>
 </body>
 </html>
-
-
-
-
