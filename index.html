@@ -3,177 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kundanam Gupta - Resume</title>
-  <meta name="description" content="Resume of Kundanam Gupta - Operations & Growth Founder, Front-End + AI Automation Builder" />
+  <title>Kundanam Gupta - Founder Profile</title>
   <style>
+    /* ✅ Always blue & underlined for Contact links */
+    section:last-of-type a {
+      color: blue;
+      text-decoration: underline;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f8;
-      color: #2d2d2d;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
       padding: 20px;
       display: flex;
       justify-content: center;
-      line-height: 1.55;
     }
+
     .container {
-      max-width: 850px;
+      max-width: 900px;
+      background: white;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .header img {
       width: 100%;
-      background: #ffffff;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-      border-radius: 8px;
-      padding: 40px 44px;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-    /* ── Header ── */
-    .header {
+
+    h1 {
       text-align: center;
-      border-bottom: 2.5px solid #2c3e50;
-      padding-bottom: 16px;
-      margin-bottom: 22px;
+      margin-bottom: 0;
+      color: #2c3e50;
     }
-    .header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #1a252f;
-      letter-spacing: 0.5px;
-    }
-    .header .subtitle {
-      font-size: 1.05rem;
-      color: #4a6274;
-      margin-top: 4px;
-      font-weight: 500;
-    }
-    .header .contact-line {
-      margin-top: 10px;
-      font-size: 0.92rem;
+
+    h2 {
+      font-size: 1.1rem;
       color: #555;
-      word-spacing: 2px;
+      text-align: center;
+      margin-top: 4px;
+      margin-bottom: 20px;
     }
-    .header .contact-line a {
-      color: #1a6fb5;
-      text-decoration: none;
-    }
-    .header .contact-line a:hover {
-      text-decoration: underline;
-    }
-    .header .contact-line .sep {
-      margin: 0 8px;
-      color: #bbb;
-    }
-    /* ── Section ── */
+
     section {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
-    section h2 {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: #1a252f;
-      border-bottom: 1.5px solid #d0d7de;
+
+    section h3 {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 4px;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
-    section p {
-      margin: 0 0 8px 0;
+      margin-bottom: 8px;
       text-align: left;
     }
-    /* ── Lists ── */
+
+    /* ✅ Consistent list alignment across devices */
     ul {
+      list-style-position: outside;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    /* ✅ Education list alignment (same as bullets visually) */
+    .edu-list {
       list-style-type: disc;
       list-style-position: outside;
-      padding-left: 22px;
-      margin: 0 0 6px 0;
-    }
-    li {
-      margin-bottom: 4px;
+      padding-left: 20px;
+      margin: 0;
       text-align: left;
     }
-    /* ── Skills Grid (single-column for ATS, visually 2-col) ── */
-    .skills-group {
-      margin-bottom: 10px;
-    }
-    .skills-group h3 {
-      font-size: 0.95rem;
-      color: #2c3e50;
-      margin: 0 0 4px 0;
-      font-weight: 600;
-    }
-    /* ── Two-column visual layout (ATS-safe: content is linear in DOM) ── */
-    .two-col-visual {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 30px;
-    }
-    .two-col-visual > .col {
-      flex: 1;
-      min-width: 280px;
-    }
-    /* ── Education & Achievements inline ── */
-    .edu-entry {
+
+    .edu-list li {
       margin-bottom: 4px;
     }
-    .edu-entry strong {
-      color: #1a252f;
+
+    /* ✅ Fixed two-column layout on all devices */
+    .two-col {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: nowrap; /* prevent vertical stacking */
+      justify-content: space-between;
+      align-items: flex-start;
     }
-    /* ── Links ── */
+
+    .two-col > div {
+      flex: 1;
+      min-width: 0;
+    }
+
     a {
-      color: #1a6fb5;
+      color: #2c3e50;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    /* ── Print styles ── */
-    @media print {
-      body {
-        background: white;
-        padding: 0;
-      }
-      .container {
-        box-shadow: none;
-        border-radius: 0;
-        padding: 20px 30px;
-      }
-    }
-    /* ── Mobile ── */
-    @media (max-width: 600px) {
-      .container {
-        padding: 24px 20px;
-      }
-      .two-col-visual > .col {
-        min-width: 100%;
-      }
-      .header .contact-line .sep {
-        display: none;
-      }
-      .header .contact-line a,
-      .header .contact-line span:not(.sep) {
-        display: block;
-        margin-bottom: 2px;
+
+    /* ✅ Allow horizontal scroll on very small screens instead of stacking */
+    @media (max-width: 500px) {
+      .two-col {
+        overflow-x: auto;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- ════ HEADER / CONTACT ════ -->
+  <div class="container" style="text-align: center;">
     <div class="header">
-      <h1>Kundanam Gupta</h1>
-      <div class="subtitle">Operations &amp; Growth Founder | Innovator &amp; Consultant | Front-End + AI Automation Builder</div>
-      <div class="contact-line">
-        <span>+91-9685356239</span>
-        <span class="sep">|</span>
-        <a href="mailto:guptakundanam@gmail.com">guptakundanam@gmail.com</a>
-        <span class="sep">|</span>
-        <a href="https://github.com/Kundanam" target="_blank">github.com/Kundanam</a>
-        <span class="sep">|</span>
-        <a href="https://www.linkedin.com/in/kundanamgupta/" target="_blank">linkedin.com/in/kundanamgupta</a>
-      </div>
+      <img src="Screenshot 2025-07-06 143845.png" alt="Kundanam Gupta" style="width: 50%; height: 100%; object-fit: cover; object-position: top center; border-radius: 12px; margin-bottom: 20px;"/>
     </div>
-    <!-- ════ PROFESSIONAL SUMMARY ════ -->
+
+    <h1>Kundanam Gupta</h1>
+    <h2>Operations & Growth Founder | Innovator & Consultant | Front-End + AI Automation Builder</h2>
+
     <section>
-      <h2>Professional Summary</h2>
+      <h3>Professional Summary</h3>
       <p>
         Startup-minded operator with deep expertise in business operations, growth strategy, and team execution.
         Technically skilled in front-end web development and AI-driven automation - capable of building MVPs, scaling workflows,
@@ -182,81 +141,80 @@
       </p>
       <p>Seeking Founding Ops, India Growth Lead, or Tech-Enabled Co-Founder roles with global startups.</p>
     </section>
-    <!-- ════ EDUCATION ════ -->
-    <section>
-      <h2>Education</h2>
-      <div class="edu-entry">
-        <strong>IIT Guwahati</strong><br />
-        BSc (Hons) - Data Science and AI
+
+    <section class="two-col">
+      <div>
+        <h3>Operations & Growth</h3>
+        <ul>
+          <li>Workflow Optimization & Scaling</li>
+          <li>Internal Tools & Team Management</li>
+          <li>Growth Strategy & Customer Success</li>
+          <li>Research & Analyst</li>
+        </ul>
+
+        <h3>Tools & Data</h3>
+        <ul>
+          <li>ETL (pipeline), Data analytics, BI representation</li>
+          <li>Shopify, Graphic designing, Content Systems</li>
+          <li>Task & Campaign Automation</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Full Stack & AI Automation</h3>
+        <ul>
+          <li><b>UI:</b> HTML, Bootstrap (CSS), JavaScript (React)</li>
+          <li><b>Backend:</b> API management, Node.js, MySQL</li>
+          <li><b>AI:</b> ML, Generative, LangChain basics, prompt engineering</li>
+          <li>n8n (Agentic), Logical scripts, Social Media Integration</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Leadership & Strategic Thinking</li>
+          <li>Customer Empathy & Multi-tasking</li>
+          <li>Spiritual & Founder Mindset</li>
+        </ul>
       </div>
     </section>
-    <!-- ════ SKILLS ════ -->
-    <section>
-      <h2>Skills</h2>
-      <div class="two-col-visual">
-        <div class="col">
-          <div class="skills-group">
-            <h3>Operations &amp; Growth</h3>
-            <ul>
-              <li>Workflow Optimization &amp; Scaling</li>
-              <li>Internal Tools &amp; Team Management</li>
-              <li>Growth Strategy &amp; Customer Success</li>
-              <li>Research &amp; Analyst</li>
-            </ul>
-          </div>
-          <div class="skills-group">
-            <h3>Tools &amp; Data</h3>
-            <ul>
-              <li>ETL (pipeline), Data analytics, BI representation</li>
-              <li>Shopify, Graphic designing, Content Systems</li>
-              <li>Task &amp; Campaign Automation</li>
-            </ul>
-          </div>
-          <div class="skills-group">
-            <h3>Soft Skills</h3>
-            <ul>
-              <li>Leadership &amp; Strategic Thinking</li>
-              <li>Customer Empathy &amp; Multi-tasking</li>
-              <li>Spiritual &amp; Founder Mindset</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col">
-          <div class="skills-group">
-            <h3>Full Stack &amp; AI Automation</h3>
-            <ul>
-              <li><strong>UI:</strong> HTML, Bootstrap (CSS), JavaScript (React)</li>
-              <li><strong>Backend:</strong> API management, Node.js, MySQL</li>
-              <li><strong>AI:</strong> ML, Generative, LangChain basics, prompt engineering</li>
-              <li>n8n (Agentic), Logical scripts, Social Media Integration</li>
-            </ul>
-          </div>
-          <div class="skills-group">
-            <h3>Hardware (Interested)</h3>
-            <ul>
-              <li>Embedded Systems &amp; IoT</li>
-              <li>Robotics &amp; Automation</li>
-            </ul>
-          </div>
-        </div>
+
+    <section class="two-col">
+      <div>
+        <h3>Key Projects</h3>
+        <ul>
+          <li>Inventory Management System</li>
+          <li>Myntra and Twitter Front-End clones</li>
+          <li>Content Upload Automation System</li>
+        </ul>
+
+        <h3>Hardware (Interested)</h3>
+        <ul>
+          <li>Embedded Systems & IoT</li>
+          <li>Robotics & Automation</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <ul class="edu-list">
+          <li>IIT Guwahati</li>
+          <li>BSc (Hons) - Data Science and AI</li>
+        </ul>
+
+        <h3>Achievements</h3>
+        <ul>
+          <li>🏆 Chess - District Champion</li>
+          <li>🥋 Karate - District Winner</li>
+          <li>🏊‍♂️ Swimming - 1st Place</li>
+        </ul>
       </div>
     </section>
-    <!-- ════ PROJECTS ════ -->
+
     <section>
-      <h2>Projects</h2>
+      <h3>Contact</h3>
       <ul>
-        <li>Inventory Management System</li>
-        <li>Myntra and Twitter Front-End clones</li>
-        <li>Content Upload Automation System</li>
-      </ul>
-    </section>
-    <!-- ════ ACHIEVEMENTS ════ -->
-    <section>
-      <h2>Achievements</h2>
-      <ul>
-        <li>Chess - District Champion</li>
-        <li>Karate - District Winner</li>
-        <li>Swimming - 1st Place</li>
+        <li>📞 +91-9685356239</li>
+        <li>📥 guptakundanam@gmail.com</li>
+        <li><a href="https://github.com/Kundanam" target="_blank">GitHub: github.com/Kundanam</a></li>
+        <li><a href="https://www.linkedin.com/in/kundanamgupta/" target="_blank">LinkedIn: linkedin.com/in/kundanamgupta</a></li>
       </ul>
     </section>
   </div>
